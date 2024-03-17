@@ -1,0 +1,75 @@
+{
+	"info": {
+		"_postman_id": "71d8e0d7-aa6d-474b-88fa-af57f13b08a6",
+		"name": "Todo API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "25015979"
+	},
+	"item": [
+		{
+			"name": "Get All Todos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:9999/api/todos"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Todo",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"Example Todo\",\n\t\"completed\": false,\n\t\"created_at\": \"2024-03-18T12:00:00Z\",\n\t\"updated_at\": \"2024-03-18T12:00:00Z\"\n}"
+				},
+				"url": "http://localhost:9999/api/todos"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Todo by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:9999/api/todos/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Todo",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"Updated Todo\",\n\t\"completed\": true,\n\t\"created_at\": \"2024-03-18T12:00:00Z\",\n\t\"updated_at\": \"2024-03-18T12:00:00Z\"\n}"
+				},
+				"url": "http://localhost:9999/api/todos/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Todo",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:9999/api/todos/1"
+			},
+			"response": []
+		}
+	]
+}
